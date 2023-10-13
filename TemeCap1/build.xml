@@ -1,0 +1,52 @@
+<project name="TemeCap1" default="run" basedir=".">
+    <description>Teme pentru capitolul 1</description>
+  
+    <property name="src" value="src" />
+    <property name="lib" value="lib" />
+    <property name="build" value="build" />
+    <property name="dist" value="dist" />
+    <property name="jar-file" value="temecap1.jar" />
+    <property name="client-class" value="org.junit.runner.JUnitCore" />
+ 
+    <target name="clean">
+        <delete dir="${build}" />
+        <delete dir="${dist}" />        
+    </target>
+
+    <target name="init">
+        <!-- Create the time stamp -->
+        <tstamp />
+        <mkdir dir="${build}" />
+    </target>
+
+    <target name="compile" depends="init" 
+        description="compile the source ">
+        
+        <javac srcdir="${src}" destdir="${build}"
+        	classpath="${lib}/junit.jar:${lib}/hamcrest.jar"
+            includes="blocks/*.java tests/*.java" 
+            includeantruntime="false" />
+    </target>
+    
+    <target name="dist" depends="compile"
+        description="generate the distribution">
+        
+        <mkdir dir="${dist}" />
+        <jar jarfile="${dist}/${jar-file}" basedir="${build}" />
+    </target>
+
+    <target name="run" depends="dist" 
+            description="runs the tests"> 
+            
+        <java classname="${client-class}" fork="true">
+            <classpath>
+                <pathelement location="${dist}/${jar-file}" />
+            	<pathelement location="${lib}/junit.jar" />
+            	<pathelement location="${lib}/hamcrest.jar" />
+            </classpath>
+            <arg line="tests.AllTests" />
+        </java>
+    </target>
+    
+</project>
+
