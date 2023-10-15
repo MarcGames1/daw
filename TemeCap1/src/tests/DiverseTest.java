@@ -6,6 +6,7 @@ import org.junit.Test;
 import blocks.CloseableResource;
 import blocks.ExceptionThrowerClass;
 import blocks.InitBlocks;
+import blocks.SemaphoreEnum;
 import blocks.Singleton1;
 import blocks.Singleton2;
 import blocks.Singleton3;
@@ -130,19 +131,19 @@ public class DiverseTest {
 	
 	@Test
 	public void testSemaphoreEnum() {
-	// TODO: uncomment these lines !
-//		assertEquals(SemaphoreEnum.values().length, 3);
-//		assertEquals(SemaphoreEnum.values()[0], SemaphoreEnum.RED); 
-//		assertEquals(SemaphoreEnum.values()[1], SemaphoreEnum.YELLOW);
-//		assertEquals(SemaphoreEnum.values()[2], SemaphoreEnum.GREEN);
-//		
-//		assertEquals(SemaphoreEnum.RED.getValue(), 3);
-//		assertEquals(SemaphoreEnum.YELLOW.getValue(), 2);
-//		assertEquals(SemaphoreEnum.GREEN.getValue(), 1);
-//		
-//		assertEquals(SemaphoreEnum.RED.isSafeToEnterCrossing(), false);
-//		assertEquals(SemaphoreEnum.YELLOW.isSafeToEnterCrossing(), true);
-//		assertEquals(SemaphoreEnum.GREEN.isSafeToEnterCrossing(), true);
+	
+		assertEquals(SemaphoreEnum.values().length, 3);
+		assertEquals(SemaphoreEnum.values()[0], SemaphoreEnum.RED); 
+		assertEquals(SemaphoreEnum.values()[1], SemaphoreEnum.YELLOW);
+		assertEquals(SemaphoreEnum.values()[2], SemaphoreEnum.GREEN);
+		
+		assertEquals(SemaphoreEnum.RED.getValue(), 3);
+		assertEquals(SemaphoreEnum.YELLOW.getValue(), 2);
+		assertEquals(SemaphoreEnum.GREEN.getValue(), 1);
+		
+		assertEquals(SemaphoreEnum.RED.isSafeToEnterCrossing(), false);
+		assertEquals(SemaphoreEnum.YELLOW.isSafeToEnterCrossing(), true);
+		assertEquals(SemaphoreEnum.GREEN.isSafeToEnterCrossing(), true);
 	}
 	
 	@Test
