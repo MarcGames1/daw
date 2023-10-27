@@ -6,10 +6,13 @@ public class CloseableResource implements AutoCloseable {
 	
 	public CloseableResource(int n) {
 		// ...
+		_n = n;
 	}
 	
 	public void use () {
 		// ...
+		if (_n == 2)
+			throw new RuntimeException();
 	}
 
 	@Override

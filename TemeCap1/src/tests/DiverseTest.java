@@ -20,11 +20,14 @@ public class DiverseTest {
 
 	@Test
 	public void testCreation() {
+		System.out.println("TEST CREATON");
 		assertEquals(InitBlocks.counter, 1);
-		
+		System.out.println(InitBlocks.counter);
 		InitBlocks b = new InitBlocks();
 		
 		assertTrue(b != null);
+		
+		System.out.println(InitBlocks.counter);
 		assertEquals(InitBlocks.counter, 4);
 	}
 		
@@ -148,9 +151,11 @@ public class DiverseTest {
 	
 	@Test
 	public void testException() {
-
+	
 		int s = 0;
 		ExceptionThrowerClass etc = new ExceptionThrowerClass();
+		
+		
 		try {
 			etc.method(3);
 		} catch (IllegalArgumentException e) {

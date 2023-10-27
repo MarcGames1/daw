@@ -1,6 +1,11 @@
 package blocks;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TileFactory {
+	
+	
 	class TileImpl implements Tile {
 		private String _color;
 		
