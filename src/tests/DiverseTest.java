@@ -29,7 +29,7 @@ public class DiverseTest {
 		ImmutableStrings is = new ImmutableStrings("abc");
 		assertTrue(is.getValue() == "abc");
 		is.add("def");
-		System.out.println(is.getValue());
+
 		assertTrue(is.getValue().equals("abcdef"));
 		assertTrue(is.getValue() != "abcdef");
 		
@@ -41,14 +41,16 @@ public class DiverseTest {
 		assertTrue(is.getValue() != "abcdef");
 		assertTrue(is.getValue().equals("abcdef"));
 	}
-	
+
 	@Test
 	public void testStrings() {
 		Strings s1 = new Strings(" a*b*c*d ");
 		s1.process();
 		assertTrue(s1.equals("dycybxa"));
+
 		
 		Strings s2 = new Strings(" \ncocoroc \t ");
+
 		s2.process();
 		assertTrue(s2.equals("cyrycxc"));
 	}

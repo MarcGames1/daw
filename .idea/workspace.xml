@@ -5,38 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7d3858-329a-41a7-a8e1-c9dd6f0888f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/daw.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cat.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/.idea/ant.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/build.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/lib/hamcrest.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/lib/junit.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/CloseableResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/ExceptionThrowerClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/HelperClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/InitBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/SemaphoreEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/Singleton1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/Singleton2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/Singleton3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/Tile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/TileFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/TileFactoryA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/blocks/TileFactoryS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/tests/AllTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemeCap1/src/tests/DiverseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/daw.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/Strings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Strings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/DiverseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DiverseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,15 +44,25 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "last_opened_file_path": "C:/Users/Georg/OneDrive/Documents/GitHub/daw",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "android.project.structure"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Georg\OneDrive\Documents\GitHub\daw" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="AntRunConfiguration">
+      <antsettings antfile="file://$PROJECT_DIR$/build.xml" target="run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,10 +83,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="4" />
+          <line>86</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
