@@ -154,6 +154,8 @@ public class DiverseTest {
 		}
 		
 		assertTrue(c.getLegs() == 5);
+		System.out.println("Tom => "+c.getName());
+		System.out.println(c.getName().equals("Tom"));
 		assertTrue(c.getName().equals("Tom"));
 
 		try {

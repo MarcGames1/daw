@@ -1,15 +1,27 @@
 package files;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serial;
 import java.io.Serializable;
 
 class Animal implements Serializable {
-	private int _legs;
+	private int _legs = 4;
 	private String _name;
-
 	public Animal(){
 		_legs = 4;
-		_name="";
+		String _name="";
 	}
+	//DUpa deserializare nu se apeleaza constructorul
+	// clasei parinte
+	public Animal(String name){
+		_legs = 4;
+		_name = name;
+	}
+
+
+
+
 
 
 	public int getLegs() {
@@ -18,7 +30,7 @@ class Animal implements Serializable {
 	}
 
 	public String getName() {
-		return _name;
+		return this._name;
 	}
 
 	public void setName(String name){
@@ -31,8 +43,25 @@ class Animal implements Serializable {
 
 public class Cat extends Animal {
 
+	public Cat(String name) {
+		super(name);
+		this.setLegs(4);
+	}
+
+	public Cat() {
 
 	}
+
+
+
+	@Serial
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException, IOException {
+		in.defaultReadObject(); // Se realizează deserializarea obiectului
+
+		// Inițializează valoarea membrului _legs corect după deserializare
+		this.setLegs(4);
+	}
+}
 
 
 
