@@ -138,7 +138,7 @@ public class DiverseTest {
 	@Test
 	public void testSerializer() {
 		Cat c = new Cat();
-//		System.out.println(c.getLegs());
+		System.out.println(c.getLegs());
 		assertTrue(c.getLegs() == 4);
 		
 		c.setLegs(5);
