@@ -5,8 +5,11 @@ import java.util.regex.Pattern;
 
 public class Strings {
 
-	private StringBuffer _value;
+	private String _value;
 
+	public String getValue(){
+		return _value;
+	}
 	public Strings(String value) {
 		value = value.trim();
 
@@ -15,7 +18,7 @@ public class Strings {
 
 //        System.out.println("Step1" + " " + s);
 
-		_value = new StringBuffer(value);
+		_value = value;
 
 //		System.out.println("Step2" + " " + bufferx);
 
@@ -23,12 +26,15 @@ public class Strings {
 
 	public void process() {
 		// TODO Auto-generated method stub
-		StringBuffer processedString = _value;
+		StringBuffer processedString = new StringBuffer(_value);
 		Pattern patt = Pattern.compile("\\*");
+
 		Matcher m = patt.matcher(processedString);
 
+
 		String x = m.replaceAll("y");
-//		bufferx = new StringBuffer(x);
+		x = x.replaceAll("o", "y");
+
 		x = x.replaceFirst("y", "x");
 
 
@@ -36,15 +42,29 @@ public class Strings {
 //		System.out.println("Step3 " + " " + hashCode());
 
 		processedString = new StringBuffer(x);
-		processedString = processedString.reverse();
+        processedString.reverse();
+		processedString.trimToSize();
 
-//		System.out.println("Step4 " + " " + hashCode());
-		System.out.println("x: " + processedString) ;
-		processedString = _value;
-		System.out.println("HashCode => "+ _value.hashCode());
+
+
+		_value = processedString.toString();
+
+
 	}
 
-	// ...
-
-
+	@Override
+	public boolean equals(Object o) {
+		if (o == this)
+			return true;
+		if(o instanceof String){
+			return this._value.equals(o);
+		}
+		if (!(o instanceof Strings))
+			return false;
+		Strings other = (Strings) o;
+        return (this._value == null && other._value == null)
+				|| (this._value != null && this._value.equals(other._value));
+	}
 }
+
+

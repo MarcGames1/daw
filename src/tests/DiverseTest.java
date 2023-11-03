@@ -46,12 +46,14 @@ public class DiverseTest {
 	public void testStrings() {
 		Strings s1 = new Strings(" a*b*c*d ");
 		s1.process();
+		System.out.println((s1.equals("dycybxa")));
 		assertTrue(s1.equals("dycybxa"));
 
 		
 		Strings s2 = new Strings(" \ncocoroc \t ");
 
 		s2.process();
+		System.out.println(s2.getValue());
 		assertTrue(s2.equals("cyrycxc"));
 	}
 	
