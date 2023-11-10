@@ -2,201 +2,93 @@ package tests;
 
 import static org.junit.Assert.assertTrue;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 
 import org.junit.Test;
 
-import files.Cat;
-import files.FileClass;
-import files.ImmutableStrings;
-import files.MyWriter;
-import files.ParsingClass;
-import files.Strings;
+import files.*;
 
 public class DiverseTest {
 	
+	/**
+	 *  as usual: DO NOT change anything in the test
+	 */
 	@Test
-	public void testImmutableString() {
-		ImmutableStrings is = new ImmutableStrings("abc");
-		assertTrue(is.getValue() == "abc");
-		is.add("def");
-
-		assertTrue(is.getValue().equals("abcdef"));
-		assertTrue(is.getValue() != "abcdef");
+	public void testFlowers() {
+		Flower fl1 = new Flower("lalea", 20);
+		Flower fl2 = new Flower("lalea", 20);
+		Flower fl3 = new Flower("trandafir", 20);
+		Flower fl4 = new Flower("margareta", 35);
 		
-		is.setTo("abcdef", true);
-		assertTrue(is.getValue() == "abcdef");
-		assertTrue(is.getValue().equals("abcdef"));
+		assertTrue(fl1.equals(fl2));
+		assertTrue(fl1 != fl2);
+		assertTrue(!fl1.equals(fl3));
+		assertTrue(!fl1.equals(null));
+		assertTrue(!fl1.equals(new String("lalea")));
 		
-		is.setTo("abcdef", false);
-		assertTrue(is.getValue() != "abcdef");
-		assertTrue(is.getValue().equals("abcdef"));
-	}
-
-	@Test
-	public void testStrings() {
-		Strings s1 = new Strings(" a*b*c*d ");
-		s1.process();
-		System.out.println((s1.equals("dycybxa")));
-		assertTrue(s1.equals("dycybxa"));
-
+		FlowerCollection fc = new FlowerCollection();
+		fc.add(fl1);
+		fc.add(fl2);
+		fc.add(fl3);
+		fc.add(fl4);
 		
-		Strings s2 = new Strings(" \ncocoroc \t ");
-
-		s2.process();
-		System.out.println(s2.getValue());
-		assertTrue(s2.equals("cyrycxc"));
-	}
-	
-	@Test
-	public void testFiles() {
-		FileClass f = new FileClass("test.txt");
-		assertTrue(f.getFile().exists() == false);
+		HashSet<Flower> flowerSet = fc.getHashSet();
+		assertTrue(flowerSet.size() == 3);
+		assertTrue(flowerSet.contains(new Flower("lalea", 20)));
+		assertTrue(!flowerSet.contains(new Flower("trandafir", 35)));
+				
+		List<Flower> listFlower = fc.getSortedList();
+		System.out.println(listFlower);
+		assertTrue(listFlower.get(0).equals(fl2));
+		assertTrue(listFlower.get(1).equals(fl3));
+		assertTrue(listFlower.get(2).equals(fl4));
 		
-		f.write("hello\nworld\n");
-		assertTrue(f.getFile().exists() == true);
+		List<Flower> reverseListFlower = fc.getReverseSortedList();
+		System.out.println(reverseListFlower);
+		assertTrue(reverseListFlower.get(0).equals(fl4));
+		assertTrue(reverseListFlower.get(1).equals(fl3));
+		assertTrue(reverseListFlower.get(2).equals(fl1));
 		
-		boolean failed = false;
-		FileReader fr = null;
-		try {
-			fr = new FileReader(new File("test.txt"));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			failed = true;
-		}
-		assertTrue(failed == false);
-		assertTrue(fr != null);
+		Comparator<Flower> comparator = fc.getReverseFlowerComparator();
+		Flower fl5 = new Flower("anemona", 40);
+		int pos = Collections.binarySearch(reverseListFlower, fl5, comparator);
+		fc.add(fl5);
 		
-		char[] in = new char[50];
-		int size = 0;
-		failed = false;
-		try {
-			size = fr.read(in);
-			fr.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-			failed = true;
-		}
-		assertTrue(failed == false);
-		assertTrue(String.valueOf(in, 0, size).equals("hello\nworld\n"));
-		
-		f.clean();
-		assertTrue(f.getFile().exists() == false);
+		reverseListFlower = fc.getReverseSortedList();
+		assertTrue(reverseListFlower.get(0).equals(fl5));
+		assertTrue(reverseListFlower.get(Math.abs(pos) - 1).equals(fl5));
 	}
 	
+	/**
+	 * uncomment the test parts and make it compile,
+	 * but DO NOT change anything else in the test!
+	 */
 	@Test
-	public void testReader() throws IOException {
-		MyWriter mw = new MyWriter();
-		assertTrue(mw.write("a file\nwith\nfour\nlines\n") == 23);
-		mw.close();
+	public void testGenerics() {
+		List<Animal> animals = new ArrayList<Animal>();
+//		Animal.addAnimal(animals, new Animal());
+//		Animal.addCat(animals, new Cat());
+//		Animal.addFish(animals, new Fish());
 		
-		File dir = new File("myDir");
-		assertTrue(dir.exists());
+		assertTrue(animals.size() == 3);
+//		assertTrue(Animal.sum(animals) == 11);
 		
-		File dirFile = new File(dir, "bar.txt");
-		assertTrue(dirFile.exists());
+		List<Cat> cats = new ArrayList<Cat>();
+//		Animal.addCat(cats, new Cat());
+//		Animal.addCat(cats, new Cat());
+//		Animal.sum(cats);
 		
-		FileReader fr = null;
-		boolean failed = false;
-		try {
-			fr = new FileReader(dirFile);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			failed = true;
-		}
-		assert(failed == false);
+		assertTrue(cats.size() == 2);
+//		assertTrue(Animal.sum(cats) == 14);
 		
-		BufferedReader br = new BufferedReader(fr);
-		
-		int i = 0;
-		String s = br.readLine();
-		while( s != null ) {
-			assert(i == 0 ? s.equals("a file") : true);
-			assert(i == 1 ? s.equals("with") : true);
-			assert(i == 2 ? s.equals("four") : true);
-			assert(i == 3 ? s.equals("lines") : true);
-			
-			s = br.readLine();
-			i ++;
-		}
-		br.close();
-		
-		mw.remove();
-		dir = new File("myDir");
-		assertTrue(dir.exists() == false);
-	}
-	
-	@Test
-	public void testSerializer() {
-		Cat c = new Cat();
-		System.out.println(c.getLegs());
-		assertTrue(c.getLegs() == 4);
-		
-		c.setLegs(5);
-		c.setName("Tom");
-		
-		try {
-			FileOutputStream fs = new FileOutputStream("cat.ser");
-			ObjectOutputStream os = new ObjectOutputStream(fs);
-			os.writeObject(c);
-			os.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		assertTrue(c.getLegs() == 5);
-		System.out.println("Tom => "+c.getName());
-		System.out.println(c.getName().equals("Tom"));
-		assertTrue(c.getName().equals("Tom"));
-
-		try {
-			FileInputStream fis = new FileInputStream("cat.ser");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			c = (Cat) ois.readObject();
-			ois.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		assertTrue(c.getLegs() == 4);
-		assertTrue(c.getName().equals("Tom"));
-
-	}
-	
-	@Test
-	public void testParse() {
-		String xml = "<album>";
-		xml += "<artist>Pink Floyd</artist>";
-		xml += "<name>The Wall</name>";
-		xml += "<list>";
-		xml += "<track>Another Brick in the Wall</track>";
-		xml += "<track>Empty Spaces</track>";
-		xml += "<track>Hey You</track>";
-		xml += "</list></album>";
-		ParsingClass pc = new ParsingClass(xml);
-		pc.parse();
-		
-		assertTrue(pc.getArtist().equals("Pink Floyd"));
-		assertTrue(pc.getName().equals("The Wall"));
-		
-		// A short introduction to lists:
-		// http://tutorials.jenkov.com/java-collections/list.html
-		// List<String> l = new ArrayList();
-		// l.add("cat");
-		// l.contains("cat") == true
-		List<String> list = pc.getTracks();
-		assertTrue(list.size() == 3);
-		assertTrue(list.contains("Another Brick in the Wall"));
-		assertTrue(list.contains("Empty Spaces"));
-		assertTrue(list.contains("Hey You"));
+		List<Fish> fishes = new ArrayList<Fish>();
+//		Animal.addFish(fishes, new Fish());
+//		Animal.addFish(fishes, new Fish());
+		assertTrue(fishes.size() == 2);
+//		assertTrue(Animal.sum(fishes) == 6);
 	}
 }

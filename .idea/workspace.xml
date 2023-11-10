@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1db8c02-ddb5-4cc0-89ee-a0420cf83765" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cat.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/daw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/FileClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/ImmutableStrings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/MyWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/ParsingClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/Strings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/DiverseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DiverseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +35,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -37,7 +49,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.DiverseTest">
+  <component name="RunManager" selected="JUnit.DiverseTest.testFlowers">
     <configuration name="DiverseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="daw" />
       <extension name="coverage">
@@ -53,7 +65,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiverseTest.testFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiverseTest.testFlowers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="daw" />
       <extension name="coverage">
         <pattern>
@@ -63,13 +75,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DiverseTest" />
-      <option name="METHOD_NAME" value="testFiles" />
+      <option name="METHOD_NAME" value="testFlowers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiverseTest.testImmutableString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiverseTest.testGenerics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="daw" />
       <extension name="coverage">
         <pattern>
@@ -79,7 +91,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DiverseTest" />
-      <option name="METHOD_NAME" value="testImmutableString" />
+      <option name="METHOD_NAME" value="testGenerics" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiverseTest.testFlowers" />
         <item itemvalue="JUnit.DiverseTest" />
+        <item itemvalue="JUnit.DiverseTest.testGenerics" />
         <item itemvalue="JUnit.DiverseTest.testSerializer" />
         <item itemvalue="JUnit.DiverseTest.testReader" />
-        <item itemvalue="JUnit.DiverseTest.testFiles" />
-        <item itemvalue="JUnit.DiverseTest.testImmutableString" />
       </list>
     </recent_temporary>
   </component>
@@ -157,44 +169,83 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/Strings.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/Strings.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/FileClass.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/FileClass.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/files/Cat.java</url>
-          <line>11</line>
+          <line>2</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/files/Cat.java</url>
-          <line>47</line>
+          <line>4</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/Cat.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="102" />
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/Cat.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="103" />
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
+          <line>59</line>
+          <properties class="files.FlowerCollection" method="contains">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="143" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
