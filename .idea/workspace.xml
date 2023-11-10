@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d1db8c02-ddb5-4cc0-89ee-a0420cf83765" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/daw.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/FileClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/ImmutableStrings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/MyWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/ParsingClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/Strings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/FlowerCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/FlowerCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/DiverseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DiverseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,68 +172,63 @@
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>60</line>
+          <line>58</line>
           <option name="timeStamp" value="144" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>61</line>
+          <line>59</line>
           <option name="timeStamp" value="145" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>62</line>
+          <line>60</line>
           <option name="timeStamp" value="146" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>65</line>
+          <line>63</line>
           <option name="timeStamp" value="147" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="148" />
+          <line>60</line>
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="149" />
+          <line>61</line>
+          <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="150" />
+          <line>62</line>
+          <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="151" />
+          <line>63</line>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="152" />
+          <line>65</line>
+          <option name="timeStamp" value="181" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="162" />
+          <line>66</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>59</line>
+          <line>57</line>
           <properties class="files.FlowerCollection" method="contains">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

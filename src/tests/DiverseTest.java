@@ -42,9 +42,14 @@ public class DiverseTest {
 		assertTrue(!flowerSet.contains(new Flower("trandafir", 35)));
 				
 		List<Flower> listFlower = fc.getSortedList();
-		System.out.println(listFlower);
+		System.out.println("EXPECTING LALEA 20");
+		System.out.println(listFlower.get(0).equals(fl2));
 		assertTrue(listFlower.get(0).equals(fl2));
+		System.out.println("EXPECTING trandafir 20");
+		System.out.println(listFlower.get(1).equals(fl3));
 		assertTrue(listFlower.get(1).equals(fl3));
+		System.out.println("EXPECTING margareta 35");
+		System.out.println(listFlower.get(2).equals(fl4));
 		assertTrue(listFlower.get(2).equals(fl4));
 		
 		List<Flower> reverseListFlower = fc.getReverseSortedList();
