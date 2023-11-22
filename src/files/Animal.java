@@ -1,30 +1,43 @@
 package files;
 
 
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Animal {
-	protected int value;
-	
+	protected int value = 1;
+
 	public Animal() {
-		// ...
+
 	}
-	
-	public int getValue() { return value; }
-	
-	static public void addAnimal(/* ... */) {
-		// ...
+	public Animal(int value) {
+	this.value = value;
 	}
-	
-	static public void addCat(/* ... */) {
-		// ...
+	public static  <T extends Animal> void addCat(List<T> animals, Cat cat) {
+
+		animals.add((T) cat);
 	}
-	
-	static public void addFish(/* ... */) {
-		// ...
+
+
+	public static <T extends Animal> void addFish(List<T> animals, Fish fish) {
+		animals.add((T) fish);
 	}
-	
-	static public int sum(/* ... */) {
-		// TODO: change this to your needs
-		return 0;
+
+	public int getValue() { return this.value; }
+
+	static public void addAnimal(
+			List<Animal> animalList, Animal animal
+	) {
+		animalList.add(animal);
+	}
+
+
+	static public <T extends Animal> int sum(List<T> animals) {
+		int result = 0;
+		for (Animal animal : animals) {
+			result += animal.getValue();
+		}
+		return  result;
 	}
 
 }

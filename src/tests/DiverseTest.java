@@ -75,25 +75,26 @@ public class DiverseTest {
 	@Test
 	public void testGenerics() {
 		List<Animal> animals = new ArrayList<Animal>();
-//		Animal.addAnimal(animals, new Animal());
-//		Animal.addCat(animals, new Cat());
-//		Animal.addFish(animals, new Fish());
+		Animal.addAnimal(animals, new Animal());
+		Animal.addCat(animals, new Cat());
+		Animal.addFish(animals, new Fish());
 		
 		assertTrue(animals.size() == 3);
-//		assertTrue(Animal.sum(animals) == 11);
-		
+		System.out.println(Animal.sum(animals));
+		assertTrue(Animal.sum(animals) == 11);
+
 		List<Cat> cats = new ArrayList<Cat>();
-//		Animal.addCat(cats, new Cat());
-//		Animal.addCat(cats, new Cat());
-//		Animal.sum(cats);
+		Animal.addCat(cats, new Cat());
+		Animal.addCat(cats, new Cat());
+		Animal.sum(cats);
 		
 		assertTrue(cats.size() == 2);
-//		assertTrue(Animal.sum(cats) == 14);
+		assertTrue(Animal.sum(cats) == 14);
 		
 		List<Fish> fishes = new ArrayList<Fish>();
-//		Animal.addFish(fishes, new Fish());
-//		Animal.addFish(fishes, new Fish());
+		Animal.addFish(fishes, new Fish());
+		Animal.addFish(fishes, new Fish());
 		assertTrue(fishes.size() == 2);
-//		assertTrue(Animal.sum(fishes) == 6);
+		assertTrue(Animal.sum(fishes) == 6);
 	}
 }
