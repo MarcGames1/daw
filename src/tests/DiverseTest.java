@@ -2,99 +2,135 @@ package tests;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
+import java.lang.annotation.Annotation;
 import java.util.List;
+import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 import org.junit.Test;
 
-import files.*;
+import files.Dog;
+import files.HelperClass;
+import files.MyAnnotation;
+import files.MyAnnotation2;
+import files.MyClass;
+import files.MyCollection;
+import files.PersonsMap;
+
 
 public class DiverseTest {
-	
-	/**
-	 *  as usual: DO NOT change anything in the test
-	 */
-	@Test
-	public void testFlowers() {
-		Flower fl1 = new Flower("lalea", 20);
-		Flower fl2 = new Flower("lalea", 20);
-		Flower fl3 = new Flower("trandafir", 20);
-		Flower fl4 = new Flower("margareta", 35);
+	public static class PrivateClass {
+		private int id = 0;
 		
-		assertTrue(fl1.equals(fl2));
-		assertTrue(fl1 != fl2);
-		assertTrue(!fl1.equals(fl3));
-		assertTrue(!fl1.equals(null));
-		assertTrue(!fl1.equals(new String("lalea")));
+		@SuppressWarnings("unused")
+		private void set() { id = 1; }
 		
-		FlowerCollection fc = new FlowerCollection();
-		fc.add(fl1);
-		fc.add(fl2);
-		fc.add(fl3);
-		fc.add(fl4);
-		
-		HashSet<Flower> flowerSet = fc.getHashSet();
-		assertTrue(flowerSet.size() == 3);
-		assertTrue(flowerSet.contains(new Flower("lalea", 20)));
-		assertTrue(!flowerSet.contains(new Flower("trandafir", 35)));
-				
-		List<Flower> listFlower = fc.getSortedList();
-		System.out.println("EXPECTING LALEA 20");
-		System.out.println(listFlower.get(0).equals(fl2));
-		assertTrue(listFlower.get(0).equals(fl2));
-		System.out.println("EXPECTING trandafir 20");
-		System.out.println(listFlower.get(1).equals(fl3));
-		assertTrue(listFlower.get(1).equals(fl3));
-		System.out.println("EXPECTING margareta 35");
-		System.out.println(listFlower.get(2).equals(fl4));
-		assertTrue(listFlower.get(2).equals(fl4));
-		
-		List<Flower> reverseListFlower = fc.getReverseSortedList();
-		System.out.println(reverseListFlower);
-		assertTrue(reverseListFlower.get(0).equals(fl4));
-		assertTrue(reverseListFlower.get(1).equals(fl3));
-		assertTrue(reverseListFlower.get(2).equals(fl1));
-		
-		Comparator<Flower> comparator = fc.getReverseFlowerComparator();
-		Flower fl5 = new Flower("anemona", 40);
-		int pos = Collections.binarySearch(reverseListFlower, fl5, comparator);
-		fc.add(fl5);
-		
-		reverseListFlower = fc.getReverseSortedList();
-		assertTrue(reverseListFlower.get(0).equals(fl5));
-		assertTrue(reverseListFlower.get(Math.abs(pos) - 1).equals(fl5));
+		public int getId() { return id; }
 	}
 	
-	/**
-	 * uncomment the test parts and make it compile,
-	 * but DO NOT change anything else in the test!
-	 */
+					
 	@Test
-	public void testGenerics() {
-		List<Animal> animals = new ArrayList<Animal>();
-		Animal.addAnimal(animals, new Animal());
-		Animal.addCat(animals, new Cat());
-		Animal.addFish(animals, new Fish());
+	public void testCollection() {
+		MyCollection myc = new MyCollection();
 		
-		assertTrue(animals.size() == 3);
-		System.out.println(Animal.sum(animals));
-		assertTrue(Animal.sum(animals) == 11);
+		Supplier<List<Dog>> supplier = myc.getSupplier();
+		
+		myc.populate();
+		
+		Predicate<Dog> greaterZero = d -> d.getId() > 0;
+		Predicate<Dog> lessFive = d -> d.getId() < 5;
+		
+		assertTrue(supplier.get().size() == 4);		
+		supplier.get().forEach(d -> assertTrue( greaterZero.and(lessFive).test(d)) );
+		
+		Consumer<List<Dog>> sorter = myc.getSorter();
+		sorter.accept(supplier.get());
+		
+		int x = 5;
+		BiPredicate<Dog, Integer> it = (d, i) -> { 
+			boolean res = (x > d.getId());
+			i = d.getId();
+			return res;
+		};
+		
+		assertTrue(supplier.get().size() == 4);
+		supplier.get().forEach(d -> assertTrue(it.test(d, x)));
+		
+		Predicate<Dog> evenDogs = d -> (d.getId() % 2 == 0);
+		
+		myc.filter(evenDogs);
+		assertTrue(supplier.get().size() == 2);
+		supplier.get().forEach(d -> assertTrue(evenDogs.test(d)));
+	}
+	
+	@Test
+	public void testMap() {
+		PersonsMap pm = new PersonsMap();
+		
+		Map<String, Integer> map = pm.getMap();
+		assertTrue(map.size() == 0);
+		
+		Function<String, Integer> mapperCreator = pm.getMapperCreator();
+		map.computeIfAbsent("Larry", mapperCreator);
+		map.computeIfAbsent("Moe", mapperCreator);
+		map.computeIfAbsent("Curley", mapperCreator);
+		assertTrue(map.size() == 3);
+		
+		BiFunction<String, Integer, Integer> mapperModifier = pm.getMapperModifier();
+		map.computeIfPresent("Larry", mapperModifier);
+		map.computeIfPresent("Moe", mapperModifier);
+		map.computeIfPresent("Curley", mapperModifier);
+		assertTrue(map.size() == 2);		
+		
+		Predicate<Integer> larry = i -> i == 'l';
+		Predicate<Integer> moe = i -> i == 'm';
+		map.forEach((k, v) -> assertTrue(larry.or(moe).test(v)));
+	}
+	
+	@Test
+	public void testReflection() {
+		PrivateClass pc = new PrivateClass();
+		
+		HelperClass.callSetWithReflection(pc);
+		assertTrue(pc.getId() == 1);
+		
+		HelperClass.modifyWithReflection(pc);
+		assertTrue(pc.getId() == 5);
+	}
+	
+	@Test
+	public void testAnnotation() {
+		Class aClass = MyClass.class;
+//		Annotation[] annotations = aClass.getAnnotations();
+//
+//		for(Annotation annotation : annotations){
+//		    if(annotation instanceof MyAnnotation){
+//		        MyAnnotation myAnnotation = (MyAnnotation) annotation;
+//		        System.out.println("name: " + myAnnotation.name());
+//		        System.out.println("value: " + myAnnotation.value());
+//		    }
+//		}
+		
+		Annotation annotation = aClass.getAnnotation(MyAnnotation.class);
+		assertTrue(annotation instanceof MyAnnotation);
+		
+		MyAnnotation myAnnotation = (MyAnnotation) annotation;
+		assertTrue(myAnnotation.name().equals("myName"));
+		assertTrue(myAnnotation.value().equals("my value"));
+		
+		Annotation annotation2 = aClass.getAnnotation(MyAnnotation2.class);
+		assertTrue(annotation2 instanceof MyAnnotation2);
+		
+		MyAnnotation2 myAnnotation2 = (MyAnnotation2) annotation2;
+		assertTrue(myAnnotation2.author().equals("Vasile"));
+		assertTrue(myAnnotation2.majorVersion() == 1);
+		assertTrue(myAnnotation2.minorVersion() == 5);
+		
+	}
 
-		List<Cat> cats = new ArrayList<Cat>();
-		Animal.addCat(cats, new Cat());
-		Animal.addCat(cats, new Cat());
-		Animal.sum(cats);
-		
-		assertTrue(cats.size() == 2);
-		assertTrue(Animal.sum(cats) == 14);
-		
-		List<Fish> fishes = new ArrayList<Fish>();
-		Animal.addFish(fishes, new Fish());
-		Animal.addFish(fishes, new Fish());
-		assertTrue(fishes.size() == 2);
-		assertTrue(Animal.sum(fishes) == 6);
-	}
 }

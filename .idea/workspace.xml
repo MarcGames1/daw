@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1db8c02-ddb5-4cc0-89ee-a0420cf83765" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Fish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/DiverseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DiverseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -36,7 +38,7 @@
     &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tema4&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Georg/OneDrive/Documents/GitHub/daw&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -135,9 +137,9 @@
       <list>
         <item itemvalue="JUnit.DiverseTest" />
         <item itemvalue="JUnit.DiverseTest.testGenerics" />
-        <item itemvalue="JUnit.DiverseTest.testFlowers" />
         <item itemvalue="JUnit.DiverseTest.testSerializer" />
         <item itemvalue="JUnit.DiverseTest.testReader" />
+        <item itemvalue="JUnit.DiverseTest.testFlowers" />
       </list>
     </recent_temporary>
   </component>
@@ -170,65 +172,6 @@
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/Cat.java</url>
-          <line>2</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/Cat.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="147" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="186" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="187" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="188" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="189" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/files/FlowerCollection.java</url>
-          <line>57</line>
-          <properties class="files.FlowerCollection" method="contains">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="143" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
