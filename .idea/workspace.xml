@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1db8c02-ddb5-4cc0-89ee-a0420cf83765" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/HelperClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/HelperClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/MyAnnotation2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/MyAnnotation2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/MyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/MyCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/MyCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/DiverseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DiverseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +51,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.DiverseTest">
+  <component name="RunManager" selected="JUnit.DiverseTest.testCollection">
     <configuration name="DiverseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="daw" />
       <extension name="coverage">
@@ -62,7 +67,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiverseTest.testFlowers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DiverseTest.testCollection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="daw" />
       <extension name="coverage">
         <pattern>
@@ -72,7 +77,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DiverseTest" />
-      <option name="METHOD_NAME" value="testFlowers" />
+      <option name="METHOD_NAME" value="testCollection" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,7 +132,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.DiverseTest.testFlowers" />
+      <item itemvalue="JUnit.DiverseTest.testCollection" />
       <item itemvalue="JUnit.DiverseTest.testGenerics" />
       <item itemvalue="JUnit.DiverseTest" />
       <item itemvalue="JUnit.DiverseTest.testReader" />
@@ -135,11 +140,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DiverseTest.testCollection" />
         <item itemvalue="JUnit.DiverseTest" />
         <item itemvalue="JUnit.DiverseTest.testGenerics" />
         <item itemvalue="JUnit.DiverseTest.testSerializer" />
         <item itemvalue="JUnit.DiverseTest.testReader" />
-        <item itemvalue="JUnit.DiverseTest.testFlowers" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +177,11 @@
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/DiverseTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

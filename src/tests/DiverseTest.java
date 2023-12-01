@@ -36,7 +36,7 @@ public class DiverseTest {
 					
 	@Test
 	public void testCollection() {
-		MyCollection myc = new MyCollection();
+ 		MyCollection myc = new MyCollection();
 		
 		Supplier<List<Dog>> supplier = myc.getSupplier();
 		

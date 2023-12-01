@@ -1,15 +1,16 @@
 package files;
 
 public class Dog {
-	private int id;
+	private int _id;
 	
 	public Dog(int i) {
-		// TODO Auto-generated constructor stub
-	}
+		_id = i;
+
+			}
 
 	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
+
+		return _id;
 	}
 
 }
